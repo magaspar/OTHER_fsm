@@ -24,17 +24,19 @@ var a = new Automaton();
 var isAccepted = a.readCommands(["1", "0", "0", "1", "0"]);
 ```
 
-We make these transitions based on the input of ["1", "0", "0", "1", "0"],
+We make these transitions based on the input of `["1", "0", "0", "1", "0"]`,
 
-1 q1 -> q2
-0 q2 -> q3
-0 q3 -> q2
-1 q2 -> q2
-0 q2 -> q3
+|     |              |
+| --- | ------------ |
+| 1   | `q1` -> `q2` |
+| 0   | `q2` -> `q3` |
+| 0   | `q3` -> `q2` |
+| 1   | `q2` -> `q2` |
+| 0   | `q2` -> `q3` |
 
 We end in `q3`, which is not our "accept" state, so we return `false`.
 
-The input of ["1", "0", "0", "1", "0"] would cause us to return `false`, as we would end in `q3`.
+The input of `["1", "0", "0", "1", "0"]` would cause us to return `false`, as we would end in `q3`.
 
 You start with the bare bones of the Automaton class, as seen in ./src/Automaton. The task
 is to complete the implementation.
