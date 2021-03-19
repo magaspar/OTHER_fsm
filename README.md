@@ -1,6 +1,6 @@
 # Finite State Machine Test
 
-Description:
+## Description:
 
 Create a finite automaton that has three states. Finite automatons are the same as finite state machines for our purposes.
 
@@ -49,19 +49,16 @@ Acceptance tests are included in the test file. Do not modify these. When all th
 
 ## setup
 
-You will need node v6 installed.
-
 Clone this repository.
 
 Go into the fsm/ folder and run:
 
 ```bash
-nvm use
-yarn
+npm i
 ```
 
 To run the tests do:
 
 ```bash
-yarn test
+npm run test
 ```
