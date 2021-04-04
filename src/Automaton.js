@@ -1,13 +1,37 @@
 export default class Automaton {
   constructor(props) {
-    // Implement this
-    // Do any setup you think you need for the Automaton to work
+    this.state = "q1";
   }
 
 
   readCommands(commands) {
-    // Implement this
-    // Read in an commands ([String])
-    // Return true if we end in our accept state, false otherwise.  
+    for (var i = 0; i < commands.length; i++) {
+     	if (this.state == "q1") {
+     		if (commands[i] == "1") {
+     			this.state = "q2";
+     		}
+     		else {
+     			continue;
+     		}
+     	}
+     	else if (this.state == "q2") {
+     		if (commands[i] == "0") {
+     			this.state = "q3";
+     		}
+     		else {
+     			continue;
+     		}
+     	}
+     	else if (this.state == "q3") {
+     		if (commands) {
+     			this.state = "q2";
+     		}
+     	}
+     }
+     if (this.state == "q2") {
+     	return true;
+     } else {
+     	return false;
+     }
   }
 }
